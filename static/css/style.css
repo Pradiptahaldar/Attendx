@@ -1,0 +1,44 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#F8FAFC;
+}
+
+.hero{
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+}
+
+.btn{
+    border-radius:10px;
+}
+
+
+.feature-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:0.3s;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+    height:100%;
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 15px 30px rgba(37,99,235,0.18);
+
+}
+
+.feature-icon{
+
+    font-size:50px;
+
+}
