@@ -56,10 +56,9 @@
 
             </ul>
 
-            <a href="#"
-               class="btn btn-primary ms-3">
-                Login
-            </a>
+           <a href="{{ url_for('auth.login') }}" class="btn btn-primary">
+            Login
+           </a>
 
         </div>
 
@@ -91,11 +90,8 @@
 
                     </a>
 
-                    <a href="#"
-                       class="btn btn-outline-primary btn-lg">
-
-                        Login
-
+                    <a href="{{ url_for('auth.login') }}" class="btn btn-outline-primary btn-lg">
+                    Login
                     </a>
 
                 </div>
@@ -380,7 +376,7 @@
 
         <p class="mb-0">
 
-            © 2026 AttendX. All Rights Reserved. By pradipta haldar
+            © 2026 AttendX. All Rights Reserved. By pradipta haldar`
 
         </p>
 

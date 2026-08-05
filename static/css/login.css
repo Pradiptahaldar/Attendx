@@ -1,0 +1,375 @@
+/* ==========================================
+   AttendX Login Page
+   ========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#2563EB,#60A5FA);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+/* ===========================
+    Background Circles
+=========================== */
+
+.circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(70px);
+
+    opacity:.35;
+
+    z-index:-1;
+
+}
+
+.circle1{
+
+    width:350px;
+
+    height:350px;
+
+    background:#ffffff;
+
+    top:-120px;
+
+    left:-120px;
+
+}
+
+.circle2{
+
+    width:450px;
+
+    height:450px;
+
+    background:#38BDF8;
+
+    bottom:-180px;
+
+    right:-180px;
+
+}
+
+/* ===========================
+    Left Panel
+=========================== */
+
+.left-panel{
+
+    color:white;
+
+}
+
+.brand-content{
+
+    padding-right:60px;
+
+}
+
+.brand-content h1{
+
+    line-height:1.1;
+
+}
+
+.brand-content p{
+
+    color:rgba(255,255,255,.9);
+
+}
+
+.feature-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.feature-item{
+
+    font-size:17px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.feature-item i{
+
+    color:#BBF7D0;
+
+    font-size:20px;
+
+}
+
+/* ===========================
+    Hero Image
+=========================== */
+
+.hero-image{
+
+    max-width:90%;
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+/* ===========================
+    Login Card
+=========================== */
+
+.login-card{
+
+    background:rgba(255,255,255,.96);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:28px;
+
+    padding:45px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+    animation:fadeUp .7s ease;
+
+}
+
+/* ===========================
+    Inputs
+=========================== */
+
+.form-label{
+
+    font-weight:600;
+
+}
+
+.input-group{
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+}
+
+.input-group-text{
+
+    background:#EFF6FF;
+
+    border:none;
+
+    color:#2563EB;
+
+    width:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.form-control{
+
+    border:none;
+
+    height:56px;
+
+    box-shadow:none !important;
+
+}
+
+.form-control::placeholder{
+
+    color:#94A3B8;
+
+}
+
+/* ===========================
+    Password Button
+=========================== */
+
+#togglePassword{
+
+    border:none;
+
+    background:#EFF6FF;
+
+    color:#2563EB;
+
+    width:60px;
+
+}
+
+#togglePassword:hover{
+
+    background:#DBEAFE;
+
+}
+
+/* ===========================
+    Login Button
+=========================== */
+
+.login-btn{
+
+    height:56px;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.35);
+
+}
+
+/* ===========================
+    Links
+=========================== */
+
+.forgot-link{
+
+    text-decoration:none;
+
+    font-size:14px;
+
+}
+
+.back-home{
+
+    text-decoration:none;
+
+    font-weight:500;
+
+}
+
+/* ===========================
+    Badge
+=========================== */
+
+.badge{
+
+    font-size:15px;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+}
+
+/* ===========================
+    Animations
+=========================== */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+    Responsive
+=========================== */
+
+@media(max-width:992px){
+
+    .left-panel{
+
+        display:none;
+
+    }
+
+    .login-card{
+
+        margin:40px 0;
+
+        padding:35px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .login-card{
+
+        padding:25px;
+
+        border-radius:20px;
+
+    }
+
+    h2{
+
+        font-size:28px;
+
+    }
+
+}
