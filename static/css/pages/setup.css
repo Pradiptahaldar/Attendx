@@ -1,0 +1,159 @@
+/* ============================
+   Global
+============================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#2563EB,#60A5FA);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+/* ============================
+   Left Side
+============================ */
+
+h1{
+
+    font-size:4rem;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+h2{
+
+    font-weight:600;
+
+}
+
+.col-lg-6:first-child{
+
+    color:white;
+
+}
+
+.col-lg-6:first-child p{
+
+    color:rgba(255,255,255,.9);
+
+}
+
+.col-lg-6:first-child ul{
+
+    list-style:none;
+
+    padding-left:0;
+
+    margin-top:30px;
+
+}
+
+.col-lg-6:first-child li{
+
+    margin-bottom:18px;
+
+    font-size:18px;
+
+}
+
+/* ============================
+   Card
+============================ */
+
+.setup-card{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.18);
+
+}
+
+/* ============================
+   Form
+============================ */
+
+label{
+
+    font-weight:500;
+
+    margin-bottom:8px;
+
+}
+
+.form-control{
+
+    height:52px;
+
+    border-radius:12px;
+
+    border:1px solid #dbe3ec;
+
+}
+
+.form-control:focus{
+
+    box-shadow:0 0 0 .2rem rgba(37,99,235,.2);
+
+    border-color:#2563EB;
+
+}
+
+/* ============================
+   Button
+============================ */
+
+.btn-primary{
+
+    height:55px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ============================
+   Responsive
+============================ */
+
+@media(max-width:992px){
+
+    .col-lg-6:first-child{
+
+        display:none;
+
+    }
+
+    .setup-card{
+
+        margin:40px 0;
+
+    }
+
+}
