@@ -16,11 +16,198 @@ AttendX | Organization Setup
 
 <div class="setup-page">
 
-    <h1>Organization Setup</h1>
+    <!-- Left Section -->
 
-    <p>
-        Welcome to AttendX. Let's set up your organization.
-    </p>
+    <section class="setup-intro">
+
+        <div class="brand">
+            <span>Attend</span><strong>X</strong>
+        </div>
+
+        <div class="intro-content">
+
+            <p class="eyebrow">
+                GET STARTED WITH ATTENDX
+            </p>
+
+            <h1>
+                Welcome to your
+                <span>organization.</span>
+            </h1>
+
+            <p class="intro-text">
+                Set up AttendX and create a smarter,
+                simpler attendance management system
+                for your organization.
+            </p>
+
+            <div class="benefits">
+
+                <div class="benefit">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Secure and reliable</span>
+                </div>
+
+                <div class="benefit">
+                    <i class="bi bi-lightning-charge"></i>
+                    <span>Fast and easy to use</span>
+                </div>
+
+                <div class="benefit">
+                    <i class="bi bi-bar-chart"></i>
+                    <span>Powerful attendance insights</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Right Section -->
+
+    <section class="setup-form-section">
+
+        <div class="setup-card">
+
+            <!-- Progress -->
+
+            <div class="setup-progress">
+
+                <div class="progress-info">
+
+                    <span>Step 1 of 3</span>
+
+                    <span>Organization</span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div class="progress-fill"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Heading -->
+
+            <div class="form-heading">
+
+                <h2>
+                    Create your organization
+                </h2>
+
+                <p>
+                    Tell us a little about your organization
+                    to get started.
+                </p>
+
+            </div>
+
+
+            <!-- Form -->
+
+            <form id="setupForm">
+
+                <div class="form-group">
+
+                    <label for="organizationName">
+                        Organization Name
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="bi bi-building"></i>
+
+                        <input
+                            type="text"
+                            id="organizationName"
+                            name="organization_name"
+                            placeholder="Enter organization name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="organizationType">
+                        Organization Type
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="bi bi-grid"></i>
+
+                        <select
+                            id="organizationType"
+                            name="organization_type"
+                            required
+                        >
+
+                            <option value="" selected disabled>
+                                Select organization type
+                            </option>
+
+                            <option value="school">
+                                School
+                            </option>
+
+                            <option value="college">
+                                College
+                            </option>
+
+                            <option value="coaching">
+                                Coaching Center
+                            </option>
+
+                            <option value="company">
+                                Company
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="continue-btn"
+                    id="continueBtn"
+                >
+
+                    Continue
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+
+            <p class="setup-note">
+
+                <i class="bi bi-lock-fill"></i>
+
+                Your information stays secure.
+
+            </p>
+
+        </div>
+
+    </section>
 
 </div>
 
