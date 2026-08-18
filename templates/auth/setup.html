@@ -109,6 +109,8 @@ AttendX | Organization Setup
 
 
             <!-- Form -->
+        <div class="setup-step" id="step1">
+
 
             <form id="setupForm">
 
@@ -195,6 +197,7 @@ AttendX | Organization Setup
                 </button>
 
             </form>
+        </div>
 
 
             <p class="setup-note">
@@ -208,6 +211,149 @@ AttendX | Organization Setup
         </div>
 
     </section>
+
+</div>
+<!-- STEP 2: ADMINISTRATOR -->
+
+<div class="setup-step" id="step2">
+
+    <div class="form-heading">
+
+        <h2>
+            Create administrator account
+        </h2>
+
+        <p>
+            This account will manage your AttendX organization.
+        </p>
+
+    </div>
+
+
+    <!-- Full Name -->
+
+    <div class="form-group">
+
+        <label for="adminName">
+            Full Name
+        </label>
+
+        <div class="input-wrapper">
+
+            <i class="bi bi-person"></i>
+
+            <input
+                type="text"
+                id="adminName"
+                name="admin_name"
+                placeholder="Enter administrator name"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- Email -->
+
+    <div class="form-group">
+
+        <label for="adminEmail">
+            Email Address
+        </label>
+
+        <div class="input-wrapper">
+
+            <i class="bi bi-envelope"></i>
+
+            <input
+                type="email"
+                id="adminEmail"
+                name="admin_email"
+                placeholder="Enter administrator email"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- Password -->
+
+    <div class="form-group">
+
+        <label for="adminPassword">
+            Password
+        </label>
+
+        <div class="input-wrapper">
+
+            <i class="bi bi-lock"></i>
+
+            <input
+                type="password"
+                id="adminPassword"
+                name="admin_password"
+                placeholder="Create a password"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- Confirm Password -->
+
+    <div class="form-group">
+
+        <label for="confirmPassword">
+            Confirm Password
+        </label>
+
+        <div class="input-wrapper">
+
+            <i class="bi bi-lock-fill"></i>
+
+            <input
+                type="password"
+                id="confirmPassword"
+                name="confirm_password"
+                placeholder="Confirm your password"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- Navigation -->
+
+    <div class="setup-navigation">
+
+        <button
+            type="button"
+            class="back-btn"
+            id="backToStep1">
+
+            <i class="bi bi-arrow-left"></i>
+
+            Back
+
+        </button>
+
+
+        <button
+            type="button"
+            class="continue-btn"
+            id="continueToStep3">
+
+            Continue
+
+            <i class="bi bi-arrow-right"></i>
+
+        </button>
+
+    </div>
 
 </div>
 

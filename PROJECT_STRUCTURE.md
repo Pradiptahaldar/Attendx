@@ -139,3 +139,31 @@ AttendX/
     ├── DATABASE.md
     ├── API.md
     └── CHANGELOG.md
+
+                 ┌──────────────┐
+                 │    AttendX   │
+                 │  Landing Page│
+                 └──────┬───────┘
+                        │
+                 First time?
+                   /          \
+                 YES           NO
+                  │             │
+                  ▼             ▼
+              Get Started      Login
+                  │             │
+                  ▼             ▼
+           Organization       Dashboard
+              Setup
+                  │
+                  ▼
+             Admin Setup
+                  │
+                  ▼
+           Setup Complete
+                  │
+                  ▼
+                Login
+                  │
+                  ▼
+             Dashboard
