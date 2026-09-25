@@ -102,3 +102,106 @@ organizations
 ├── updated_at AUTOMATIC
 └── is_active REQUIRED → TRUE by default
 
+sections 
+| Field                 | Type        | Required | Purpose                        |
+| --------------------- | ----------- | -------: | ------------------------------ |
+| `id`                  | BIGINT      |        ✅ | Unique section ID              |
+| `organization_id`     | BIGINT      |        ✅ | Owning organization            |
+| `department_id`       | BIGINT      |        ❌ | Department                     |
+| `academic_session_id` | BIGINT      |        ✅ | Academic session               |
+| `study_year`          | ENUM/choice |        ✅ | First/Second/Third/Fourth year |
+| `name`                | VARCHAR(50) |        ✅ | Section name, e.g. A           |
+| `created_at`          | DATETIME    |        ✅ | Creation time                  |
+| `updated_at`          | DATETIME    |        ✅ | Last update                    |
+| `is_active`           | BOOLEAN     |        ✅ | Defaults to TRUE               |
+
+students
+| Field             | Required | Details                       |
+| ----------------- | -------: | ----------------------------- |
+| `id`              |        ✅ | Unique student ID             |
+| `organization_id` |        ✅ | Organization                  |
+| `student_id`      |        ✅ | Institution's student/roll ID |
+| `full_name`       |        ✅ | Full name                     |
+| `email`           |        ❌ | Student email                 |
+| `phone`           |        ❌ | Phone                         |
+| `date_of_birth`   |        ❌ | DOB                           |
+| `gender`          |        ❌ | Controlled choice             |
+| `profile_photo`   |        ❌ | Photo                         |
+| `created_at`      |        ✅ | Automatic                     |
+| `updated_at`      |        ✅ | Automatic                     |
+| `is_active`       |        ✅ | Default `TRUE`                |
+
+
+students enrollment
+| Field                 | Required | Details                   |
+| --------------------- | -------: | ------------------------- |
+| `id`                  |        ✅ | Enrollment ID             |
+| `student_id`          |        ✅ | Student                   |
+| `academic_session_id` |        ✅ | Academic session          |
+| `department_id`       |        ❌ | Optional department       |
+| `study_year`          |        ✅ | First/Second/Third/Fourth |
+| `section_id`          |        ✅ | Student's section         |
+| `created_at`          |        ✅ | Automatic                 |
+| `updated_at`          |        ✅ | Automatic                 |
+| `is_active`           |        ✅ | Current enrollment status |
+
+subject
+
+| Field             | Type         | Required | Purpose                         |
+| ----------------- | ------------ | -------: | ------------------------------- |
+| `id`              | BIGINT       |        ✅ | Unique subject ID               |
+| `organization_id` | BIGINT       |        ✅ | Organization                    |
+| `department_id`   | BIGINT       |        ❌ | Department offering the subject |
+| `name`            | VARCHAR(150) |        ✅ | Subject name                    |
+| `code`            | VARCHAR(50)  |        ✅ | Subject code                    |
+| `description`     | TEXT         |        ❌ | Optional description            |
+| `created_at`      | DATETIME     |        ✅ | Creation time                   |
+| `updated_at`      | DATETIME     |        ✅ | Last update                     |
+| `is_active`       | BOOLEAN      |        ✅ | Defaults to `TRUE`              |
+
+course assignments
+course_assignments
+├── id
+├── organization_id
+├── subject_id
+├── teacher_id
+├── section_id
+├── academic_session_id
+├── assignment_type
+│     ├── THEORY
+│     ├── LAB
+│     ├── PRACTICAL
+│     └── OTHER
+├── created_at
+├── updated_at
+└── is_active
+
+class_sessions — FINAL
+class_sessions
+├── id
+├── organization_id
+├── course_assignment_id
+├── session_date
+├── start_time
+├── end_time
+├── room                  OPTIONAL
+├── created_at
+├── updated_at
+└── is_cancelled         DEFAULT FALSE
+
+attendance — FINAL
+attendance
+├── id
+├── organization_id
+├── student_id
+├── class_session_id
+├── status
+│     ├── PRESENT
+│     ├── ABSENT
+│     ├── LATE
+│     └── EXCUSED
+├── marked_at
+├── marked_by
+├── remarks             OPTIONAL
+├── created_at
+└── updated_at

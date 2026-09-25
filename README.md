@@ -30,3 +30,11 @@ It is designed for schools, colleges, coaching centers, and offices.
 ## 🚀 Project Status
 
 🚧 Phase 1 - Foundation
+                    Django Authentication
+                           │
+             ┌─────────────┼─────────────┐
+             ▼             ▼             ▼
+           Admin         Teacher       Student
+             │             │             │
+             ▼             ▼             ▼
+       Admin Dashboard  Teacher Panel  Student Portal
