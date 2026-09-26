@@ -87,3 +87,50 @@ class AcademicSession(models.Model):
         ]
     def __str__(self):
         return f"{self.name} - {self.organization.name}"
+class Section(models.Model):
+    class StudyYear(models.TextChoices):
+        FIRST_YEAR = "FIRST_YEAR", "First Year"
+        SECOND_YEAR = "SECOND_YEAR", "Second Year"
+        THIRD_YEAR = "THIRD_YEAR", "Third Year"
+        FOURTH_YEAR = "FOURTH_YEAR", "Fourth Year"
+
+    organization = models.ForeignKey(
+        Organization,
+        on_delete=models.CASCADE,
+        related_name="sections",
+    )
+    department = models.ForeignKey(
+        Department,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="sections",
+    )
+    academic_session = models.ForeignKey(
+        AcademicSession,
+        on_delete=models.CASCADE,
+        related_name="sections",
+    )
+    study_year = models.CharField(
+        max_length=20,
+        choices=StudyYear.choices,
+    )
+    name = models.CharField(max_length=50)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(default=True)
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=[
+                    "organization",
+                    "department",
+                    "academic_session",
+                    "study_year",
+                    "name",
+                ],
+                name="unique_section_per_academic_context",
+            ),
+        ]
+    def __str__(self):
+        return f"{self.name} - {self.get_study_year_display()}"
