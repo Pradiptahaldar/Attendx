@@ -60,3 +60,30 @@ class Department(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.code})"
+
+class AcademicSession(models.Model):
+    organization = models.ForeignKey(
+        Organization,
+        on_delete=models.CASCADE,
+        related_name="academic_sessions",
+    )
+    name = models.CharField(max_length=20)
+    start_date = models.DateField()
+    end_date = models.DateField()
+    is_current = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["organization", "name"],
+                name="unique_academic_session_per_organization",
+            ),
+            models.CheckConstraint(
+                condition=models.Q(end_date__gt=models.F("start_date")),
+                name="academic_session_end_after_start",
+            ),
+        ]
+    def __str__(self):
+        return f"{self.name} - {self.organization.name}"
